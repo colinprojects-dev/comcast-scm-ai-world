@@ -1,68 +1,55 @@
-# Oracle AI World 2026 — Your Supply Chain Management Guide
+# Comcast · Oracle AI World 2026 SCM Guide
 
-A separate static guide built around the supplied Oracle SCM investment areas. No customer name, deployment, maturity, business challenge, migration decision or additional entitlement is inferred. Other persona projects are unchanged. Nothing has been published, registered or deployed.
+An enrichment of the existing site at http://127.0.0.1:8799/. Its Josh-template design foundation, original SCM areas, session choices, chronological navigation, personal agenda controls and original storage schema are preserved. No other persona project was modified. Nothing was published, deployed or registered.
 
-## Contents and preview
+## Contents
 
-- 99 unique curated choices, 100 official session IDs, 102 scheduled offerings.
-- 14 Essential, 25 Strongly Recommended, 35 Useful Alternative, 25 Discovery choices.
-- A fixed 13-offering starting agenda covers all seven investment areas. It has no overlaps and at least 30 minutes between same-day sessions. Buffers are planning allowances, not measured walking times.
-- Six supplied SaaS areas and one EBS SCM area reproduce all eight supplied entitlement codes. Product counts overlap across areas.
-- Local preview: http://127.0.0.1:8799/. Repository-path preview: http://127.0.0.1:8799/scm-ai-world/.
+- **110 unique session choices / 111 official IDs / 113 scheduled offerings**. All 99 original choices remain, with their indices and 102 offering identities intact.
+- **16 Essential / 62 Useful alternative / 32 Adjacent / requested** choices. Requested session is an independent label, not a relevance tier.
+- All **26 screenshot sessions** were live-verified in the already-open terminal-browser catalog and labeled Requested session. Five screenshot day/time differences are flagged in Sources & limitations, along with an additional THR1577 offering.
+- BOO1584 is explicitly marked **Repeated Session** in the official catalog: Monday and Tuesday are separate offerings of one session, not a confirmed multipart course.
+- Eleven new choices cover business projects (3), adjacent enterprise-data governance (2), Oracle Integration (4) and customer adoption/release readiness (2).
+- The revised **13-offering recommendation** covers the original seven investment areas, has zero overlaps and minimum 30-minute same-day buffers. These are planning allowances, not measured walking times.
 
-The website is plain HTML, CSS and JavaScript with embedded session data and a matching JSON source. It requires no backend, account, external font, runtime service, dependency installation or GitHub Actions build. All assets use relative paths.
+The source is plain static HTML, CSS and JavaScript with embedded data matching sessions.json. There is no runtime backend, account, installation dependency or required environment variable. Relative asset paths work at the root and under /scm-ai-world/.
 
-## GitHub Pages upload — publish from the repository root
+## Local preview and maintenance
 
-1. Extract `scm-ai-world-github-pages.zip` into a local folder. Do not upload the ZIP itself.
-2. Create a separate GitHub repository, for example `scm-ai-world`. Use a public repository for free GitHub Pages on a free account. Review the attendee-facing content before publishing it.
-3. Choose **Add file → Upload files**. Upload **all extracted files directly to the repository root**, alongside `index.html`. Do not upload an enclosing folder. Include `.nojekyll` and `.gitignore`.
-4. Commit the files to `main`.
-5. In **Settings → Pages**, choose **Deploy from a branch**, branch **main**, folder **/(root)**, then Save. Do not select `/docs`; this package uses the root method.
-6. After GitHub finishes deployment, open the Pages URL shown in Settings. With account `colinprojects-dev` and repository `scm-ai-world`, the expected URL would be `https://colinprojects-dev.github.io/scm-ai-world/`. This is an example destination, not an already-published URL.
+With an existing Node.js runtime: **node build.mjs**, **node verify.mjs**, then **node serve.mjs**. The preview uses port 8799 by default and supports both / and /scm-ai-world/. Set PORT only if an alternate local port is needed. GitHub Pages does not use this server. No dependencies were changed or added.
 
-Runtime files that must remain together:
+Edit sessions.json and/or layout.html, then rebuild index.html. verify.mjs checks embedded/source consistency, counts, source links, offering identities, requested labels, repeat consolidation, partial overlaps, unknown-time exclusion, plan validation, calendar UTC conversion and static asset paths. Keep all runtime files together.
 
-```text
-index.html
-sessions.json
-catalog-ui.js
-agenda-core.js
-calendar.js
-agenda.js
-discovery.js
-agenda.css
-.nojekyll
-```
+## Manual GitHub Pages upload — use the repository root
 
-The ZIP also contains this README, `.gitignore`, and the public authoring/verification scripts `layout.html`, `build.mjs`, `serve.mjs` and `verify.mjs`. Uploading all of them is safe; only the runtime files above are loaded by the website. No private research, raw catalog collection, browser state, personal agenda export, credential, cache or dependency directory is included. Publication is a separate manual action.
+This package preserves the earlier SCM root deployment approach. Do not switch it to /docs.
 
-## Local authoring
+1. Extract the ZIP. Open the existing SCM repository (for example scm-ai-world), or create a separate repository with that name if one does not exist. Do not upload to Josh’s separate repository or another persona repository.
+2. Choose **Add file → Upload files**. Upload **all 15 files inside the extracted comcast-scm-ai-world-enriched-20261021 folder directly to the repository root**. Do not upload the enclosing folder or the ZIP. Include .nojekyll and .gitignore.
+3. Commit to main. Under **Settings → Pages**, select **Deploy from a branch → main → /(root)**. Keep that publishing folder consistent with the root upload.
+4. Use the Pages URL shown by GitHub after it deploys. With account colinprojects-dev and repository scm-ai-world, the expected URL is https://colinprojects-dev.github.io/scm-ai-world/. No publication has been performed by this preparation.
 
-With Node.js available, run `node build.mjs`, `node verify.mjs`, then `node serve.mjs`. The PORT environment variable may change the local port. The preview server exposes only runtime files and supports both `/` and `/scm-ai-world/`. Node and the preview server are not used by GitHub Pages.
+The 15 files are:
 
-Edit `layout.html` or `sessions.json` and rebuild `index.html` before uploading changes. `sessions.json` and the embedded JSON in `index.html` must match. `verify.mjs` checks this, counts, offering identities, agenda buffers, conflicts, imports, repeated IDs, source URLs, calendar conversion and relative paths.
+index.html, sessions.json, agenda.css, catalog-ui.js, agenda-core.js, agenda.js, calendar.js, discovery.js, .nojekyll, .gitignore, README.md, layout.html, build.mjs, serve.mjs, verify.mjs.
 
-## Research and factual limits
+The first nine are runtime files. The remaining files document or reproduce the build and checks. No private raw catalog, research notes, browser exports, backups, credentials, tokens, caches or dependency directories are included. Review customer-specific interests before choosing public visibility.
 
-Research used only the already-open official Oracle AI World 2026 catalog in the terminal browser on October 21, 2026: all available pagination, a Supply Chain & Manufacturing filter cross-check, relevance screening, and direct verification of all 100 retained detail pages. All retained pages loaded successfully. The catalog header showed 719 sessions; complete pagination rendered 717 distinct listings and the filter dialog reported 717 results. The discrepancy is unresolved and disclosed in the site; no inspection of two additional unseen listings is claimed.
+## Saving, reset and transfer
 
-The year was checked against an explicit Oracle AI World 2026 session title in that catalog. Day filters publish October 25–28 with 2026 date values; all retained offering times are PDT (UTC−07:00). Official titles, IDs, speakers, formats, locations, dates and times are preserved. Concise scope/value summaries, tiers, product mappings, business outcomes, content focus and evidence stages are advisory interpretations. Check official pages before attending because schedules can change.
+The existing **oracle-scm-ai-world-plan-v1** key and **oracle-scm-ai-world-plan** version-1 JSON schema are unchanged. All original 99 session indices and 102 scheduled offering identities remain compatible. Existing custom selections are not automatically overwritten by the new baseline. The expandable reference plan shows the updated recommendation; **Reset to recommended** applies it only after confirmation and preserves notes and discovery answers. The original 12 answer slots remain, with related question refinements; three more focused questions were added. Review earlier answers against the revised wording.
 
-HOL2769 and HOL2325 are the same repeated FDI workshop and are consolidated into one choice. Each offering keeps its own official title, ID and link. BOO1584 and THR1577 each have two published offerings under one ID. The unique-choice and scheduled-offering totals are deliberately separate.
+Notes, answers and choices save only in this browser and origin. They do not automatically transfer from localhost to GitHub Pages, another port, device or browser. Export plan JSON on the original site, then import it on the hosted site. Import replaces selections, notes and answers; export a backup first. Unknown/duplicate offering IDs and other-guide schemas are rejected without changing displayed data. Personal exports include notes and answers; review them before sharing. Sharing the site URL shares the guide, not private selections. Calendar exports are tentative holds and do not register seats.
 
-The Fusion Agent Studio hackathon is fully booked and registration closed. It can only be added after an explicit existing-registration planning acknowledgment; required virtual training and laptop notes are displayed. Sunday courses OUT1006 and OUT1009 are explicitly paid with registration through My Account; prices are not supplied. Laptop notes are preserved for applicable labs. Other absent fees or prerequisites are marked Not provided, which does not imply free or unrestricted.
+Conflict detection covers partial overlaps, including a short theater inside a longer breakout. The notice reads **Scheduling conflict — choose an option**. Keep both for comparison or explicitly replace conflicting selections; none is silently removed. Each repeated session can be selected by its individual time slot. On-demand/unknown-time entries are excluded from timed selection.
 
-Seeded, embedded or release-specific catalog wording does not establish your contractual inclusion, release, configuration, permissions or regional availability. Current customer use, exploration, roadmap previews and targets remain distinct. Meta is exploring use cases; CSG’s 80–90% compliance automation figure is a target; Watlow’s 60% process-efficiency improvement is a customer-specific published result. No customer outcome is a promise for your organization.
+## Source and accuracy boundaries
 
-Specific PLM, inventory, manufacturing, maintenance, WMS, OTM, GTM, Field Service, analytics extensions, OCI and partner-tool rights are unverified. Product-group entitlements do not prove submodule coverage or current deployment. EBS optimization/coexistence coverage is conditional: the catalog has relevant architecture and phased-modernization examples, not a verified comprehensive EBS SCM operations clinic. No migration or product purchase is recommended by default.
+The previous SCM research was reused. This expansion checked **26 requested pages and 11 additions** through the official catalog already open in the terminal browser on October 21, 2026, without broad recollection, external search or API retrieval. Existing retained evidence plus the new checks cover 111 official IDs. The event year is confirmed by an explicit Oracle AI World 2026 catalog title; date filters show October 25–28 and schedules publish **PDT (UTC−07:00)**. Titles, dates, times, rooms, speakers and published attributes are catalog facts; topic mappings, tiers and concise value explanations are advisory.
 
-## Saved agendas, exports and sharing
+Official screenshot corrections: LRN1498 Monday 8:15–9:00 AM; LRN1080 Monday 2:00–2:45 PM; LRN1503 Tuesday 8:00–8:45 AM; LRN1083 Monday 2:00–2:45 PM; LRN1082 Monday 3:15–4:00 PM. All are PDT. The screenshot lacked full dates, AM/PM and timezone. THR1577 additionally offers Wednesday 11:40 AM–12:00 PM. Use the complete in-site checklist for all 26 exact titles and schedules.
 
-The storage key is `oracle-scm-ai-world-plan-v1`. This guide never reads or modifies another persona’s storage keys. Notes, discovery answers and selections save only in the current browser and origin; they do not automatically move to GitHub Pages, another device or another browser. There is no cloud synchronization or shared backend.
+PDH, Product Hub and cycle counting searches returned No matching sessions. PLM/product-data and EDM examples are adjacent; EDM is not automatically PDH, and PLM is not a verified PDH customer story. No cycle-counting practice, reconciliation procedure or cycle-count-specific BI demonstration is claimed. FDI is distinguished from OTBI, Oracle Analytics and other analytics products; a topic tag alone is not product/capability evidence. Comcast’s business project application and middleware architecture remain unknown. Oracle Integration development projects are not the business project module. Capital-construction examples are conditional.
 
-To transfer your plan, choose **Export plan JSON** on the old origin. On the hosted site, choose **Import plan JSON**, load or paste that file, and import it. Import replaces the displayed SCM selections, notes and answers; export a backup first. Invalid, unknown-offering and other-guide imports leave data unchanged. Personal JSON exports contain visitor-entered notes and answers; review them before sharing. The public URL shares the fixed guide, not private selections.
+Customer results, demonstrations, exploration, current functions and roadmaps remain distinct. No agent is claimed to solve a Comcast operational error without technical validation. Product codes from the earlier brief remain supplied context, not independent proof of installed submodules, availability or contractual rights. Meta is evaluating; CSG’s 80–90% figure is a target; Watlow’s 60% result is case-specific. First Solar’s learning example includes HR goal creation and does not prove SCM error resolution.
 
-Adding an overlapping offering offers explicit keep, replace or cancel actions. The comparator includes alternatives hidden by filters and different-start overlaps. Touching endpoints are not overlaps but are flagged as tight transitions. Reset and clear require confirmation and preserve notes and answers. Typing discovery answers does not automatically change recommendations. Selecting a session never registers you or reserves a seat.
-
-**Export calendar · ICS** creates tentative events for selected offerings. Published PDT times are converted to explicit UTC, including next-day UTC endings where applicable. Each event preserves the specific offering’s official title and link. Calendar exports include session planning information, not private agenda notes or discovery answers. Importing the calendar into a calendar application is your separate manual action.
+Sunday paid courses and the closed hackathon remain optional, with published fees/prerequisites/equipment notices preserved. Missing fields are Not provided, which does not mean free or unrestricted. The HOL2769/HOL2325 workshop remains one choice with two official IDs and offerings. Room and registration requirements remain external Oracle dependencies; recheck schedules before attending.
